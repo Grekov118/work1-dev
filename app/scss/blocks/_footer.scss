@@ -1,0 +1,252 @@
+.footer {
+  &__raleway {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: -210px;
+      left: -15px;
+      max-width: 100%;
+      width: 102%;
+      height: 330px;
+      background-image: url('../images/frames/foot-frame.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top;
+
+      @media (max-width: $bs) {
+        top: -120px;
+        left: -5px;
+      }
+
+      @media (max-width: $lg) {
+        top: -85px;
+        height: 135px;
+      }
+
+      @media (max-width: $xs) {
+        height: 65px;
+        top: -45px;
+      }
+    }
+  }
+
+  &__wrap {
+    display: flex;
+
+    @media (max-width: $bs) {
+      flex-wrap: wrap-reverse;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+
+    @media (max-width: $bs) {
+      margin: 0 auto;
+    }
+
+    @media (max-width: $md) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  .menu {
+    margin-bottom: 148px;
+
+    @media (max-width: $bs) {
+      padding-top: 60px;
+      margin-bottom: 55px;
+    }
+
+    @media (max-width: $md) {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media (max-width: $xs) {
+      margin-bottom: 0;
+    }
+  }
+
+  .menu__list {
+    margin-left: auto;
+
+    @media (max-width: $xxl) {
+      margin-left: 250px;
+    }
+
+    @media (max-width: $bs) {
+      margin-left: 175px;
+    }
+
+    @media (max-width: $lg) {
+      display: flex;
+      margin-left: 60px;
+    }
+
+    @media (max-width: $sm) {
+      margin: 0 auto;
+    }
+
+    @media (max-width: $xs) {
+      display: none;
+    }
+  }
+
+  .menu__item {
+    @media (max-width: $sm) {
+      font-size: 16px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 188px;
+
+      @media (max-width: $bs) {
+        margin-right: 80px;
+      }
+
+      @media (max-width: $sm) {
+        margin-right: 30px;
+      }
+    }
+  }
+
+  .menu__link,
+  .footer__link {
+    color: $main;
+    transition: all 0.5s ease-in;
+
+    &:hover {
+      color: #E34040;
+    }
+
+    &:active {
+      color: #E34040;
+    }
+
+    &:focus {
+      outline: transparent;
+      color: #E34040;
+    }
+  }
+
+  .logo {
+    position: relative;
+
+    @media (max-width: $bs) {
+      margin-right: 20px;
+    }
+
+    @media (max-width: $md) {
+      margin-right: 0;
+      margin-bottom: 75px;
+    }
+
+    @media (max-width: $xs) {
+      margin-bottom: 55px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      bottom: -115px;
+      left: -155px;
+      width: 310px;
+      height: 120px;
+      background-image: url('../images/sprite.svg#icons--vector');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+
+      @media (max-width: $md) {
+        left: -120px;
+      }
+
+      @media (max-width: $sm) {
+        bottom: -130px;
+        height: 135px;
+      }
+    }
+  }
+
+  &__box {
+    position: relative;
+    padding-top: 30px;
+    max-width: 300px;
+    margin-right: 140px;
+
+    @media (max-width: $xxl) {
+      margin-right: 75px;
+    }
+
+    @media (max-width: $lg) {
+      margin-right: 50px;
+    }
+
+    @media (max-width: $md) {
+      padding: 10px;
+      margin: 0 auto 30px 0;
+    }
+
+    &:last-child {
+      margin-right: 151px;
+
+      @media (max-width: $xxl) {
+        margin-right: 45px;
+      }
+
+      @media (max-width: $lg) {
+        margin-right: 0;
+      }
+
+      @media (max-width: $md) {
+        margin-bottom: 0;
+        margin-right: auto;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 139px;
+      height: 3px;
+      background: linear-gradient(90deg, #3093EF -0.36%, rgba(48, 147, 239, 0) 100.36%);
+    }
+  }
+
+  &__item {
+    margin-bottom: 25px;
+
+    @media (max-width: $md) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__user {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: $bs) {
+      flex-direction: row;
+      margin: 0 auto;
+      margin-bottom: 40px;
+    }
+
+    .menu__button {
+      margin-top: 50px;
+      margin-bottom: 0;
+
+      @media (max-width: $bs) {
+        margin: 0 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.instalation {
+  margin-bottom: 256px;
+
+  @media (max-width: $bs) {
+    margin-bottom: 110px;
+  }
+
+  @media (max-width: $md) {
+    margin-bottom: 100px;
+  }
+
+  @media (max-width: $xs) {
+    margin-bottom: 30px;
+  }
+
+  .process__num {
+    @media (max-width: $md) {
+      top: 5px;
+      right: 0px;
+    }
+  }
+}

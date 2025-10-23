@@ -1,0 +1,283 @@
+.process {
+  margin-bottom: 200px;
+
+  @media (max-width: $md) {
+    margin-bottom: 60px;
+  }
+
+  @media (max-width: $xs) {
+    margin-bottom: 30px;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-around;
+
+    @media (max-width: $xl) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    position: relative;
+    max-width: 500px;
+    min-height: 685px;
+    margin: 0 auto;
+
+    @media (max-width: $xl) {
+      margin: 0 12px;
+    }
+
+    @media (max-width: $lg) {
+      margin: 0 auto;
+      max-width: 700px;
+    }
+
+    @media (max-width: $xs) {
+      max-width: 320px;
+      min-height: 485px;
+    }
+
+    &:last-child {
+      margin: 0 auto;
+    }
+
+    &:not(:last-child) {
+      @media (max-width: $xxl) {
+        margin-bottom: 40px;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 15px;
+      right: 0;
+      width: 151px;
+      height: 84px;
+      border: none;
+      border-top: 1px solid #087DEA;
+      border-right: 1px solid #087DEA;
+
+      @media (max-width: $bs) {
+        width: 84px;
+      }
+
+      @media (max-width: $md) {
+        top: 0;
+        right: -10px;
+      }
+
+      @media (max-width: $xs) {
+        display: none;
+      }
+    }
+
+    .process__box {
+      @media (max-width: $bs) {
+        margin-left: 15px;
+      }
+    }
+  }
+
+  &__name {
+    font-size: 25px;
+    @extend %Franck600;
+    margin-bottom: 78px;
+
+    @media (max-width: $md) {
+      text-align: center;
+    }
+
+    @media (max-width: $xs) {
+      font-size: 20px;
+      margin-bottom: 13px;
+    }
+  }
+
+  &__num {
+    display: inline-block;
+    position: absolute;
+    opacity: .7;
+    top: 0;
+    right: -30px;
+    z-index: -1;
+    @extend %Disp700;
+    font-size: 140px;
+    line-height: 1;
+    -webkit-text-stroke: 2px red;
+    opacity: 0.5;
+    color: transparent;
+
+    @media (max-width: $xxl) {
+      right: -10px;
+    }
+
+    @media (max-width: $xs) {
+      font-size: 85px;
+      top: -5px;
+      right: 5px;
+    }
+  }
+
+  &__box {
+    width: 500px;
+    min-height: 296px;
+    margin-bottom: 40px;
+
+    @media (max-width: $sm) {
+      margin-left: 10px;
+    }
+
+    @media (max-width: $xs) {
+      margin-left: auto;
+      width: 295px;
+      min-height: 192px;
+      margin-bottom: 15px;
+    }
+  }
+
+  .frame {
+    &::after {
+      @media (max-width: $xs) {
+        left: -1px;
+        background-size: 100%;
+      }
+    }
+
+    &::before {
+      @media (max-width: $xs) {
+        top: -13px;
+        left: -11px;
+        background-size: 100%;
+      }
+    }
+  }
+
+  &__image {
+    position: absolute;
+    overflow: hidden;
+    width: 95%;
+    height: 291px;
+    left: -9px;
+    top: -9px;
+    border-radius: 66.2px;
+
+    @media (max-width: $bs) {
+      left: 6px;
+    }
+
+    @media (max-width: $xs) {
+      width: 301px;
+      height: 186px;
+      left: -11px;
+      top: 4px;
+      border-radius: 53.2px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    padding: 10px;
+  }
+
+  &__list {
+    padding: 0 5px;
+    text-align: center;
+    margin-bottom: 40px;
+
+    @media (max-width: $xs) {
+      margin-left: -10px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__paragraph {
+    @extend %Gil500;
+    color: $main;
+
+    @media (max-width: $sm) {
+      font-size: 16px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 13px;
+    }
+  }
+
+  &__btn {
+    padding: 0;
+    letter-spacing: 0.05em;
+  }
+}
+
+.arrow-left-3 {
+  transform: rotateY(180deg);
+}
+
+.arrow-left-3,
+.arrow-right-3 {
+  color: $accent;
+}
+
+.fancybox-container {
+  background: rgba(8, 20, 35, 0.5);
+}
+
+.fancybox-bg {
+  background: rgba(8, 20, 35, 0.95);
+  backdrop-filter: blur(20px);
+}
+
+
+.fancybox-navigation .fancybox-button {
+  height: 160px;
+  top: calc(50% - 80px);
+  width: 75px;
+  background-color: transparent;
+  outline: transparent;
+
+  @media (max-width: $md) {
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+}
+
+.fancybox-is-open .fancybox-bg {
+  opacity: 1;
+}
+
+
+.fancybox-caption .fancybox-caption--separate,
+.fancybox-caption__body {
+  display: none;
+}
+
+.fancybox-infobar {
+  left: 40px;
+  color: $main;
+}
+
+.fancybox-toolbar {
+  border-color: transparent;
+}
+
+.fancybox-button {
+  background: #081524;
+}
+
+.fancybox-thumbs {
+  background: #161242;
+}
+
+.fancybox-thumbs__list {
+  background: rgb(8, 20, 34);
+  backdrop-filter: blur(20px);
+}
+
+.fancybox-thumbs__list a::before {
+  border: 4px solid #d80000;
+}

@@ -1,0 +1,63 @@
+.working {
+  margin-bottom: 177px;
+
+  @media (max-width: $md) {
+    margin-bottom: 100px;
+  }
+
+  @media (max-width: $md) {
+    margin-bottom: 60px;
+  }
+
+  .process__image {
+    position: absolute;
+    overflow: hidden;
+
+    @media (max-width: $xs) {
+      left: -8px;
+      top: 5px;
+      width: 301px;
+      height: 186px;
+
+      border-radius: 55.2px;
+    }
+  }
+
+  .frame {
+    &::after {
+      @media (max-width: $xs) {
+        background-size: 100% 85%;
+        background-position: center;
+        overflow: hidden;
+        left: 2px;
+      }
+    }
+
+    &::before {
+      @media (max-width: $xs) {
+        background-size: 100%;
+        overflow: hidden;
+        top: -11px;
+        left: -9px;
+      }
+    }
+  }
+
+  .process__item {
+    &:not(:last-child) {
+
+      @media (max-width: $xxl) {
+        margin-bottom: 60px;
+      }
+
+      @media (max-width: $xs) {
+        margin-bottom: 35px;
+      }
+    }
+  }
+
+  .process__num {
+    right: 0;
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,79 @@
+%Franck400 {
+  font-family: 'FranckerCYR',
+    sans-serif;
+  font-weight: 400;
+}
+
+%Franck300 {
+  font-family: 'FranckerCYR',
+    sans-serif;
+  font-weight: 300;
+}
+
+%Franck600 {
+  font-family: 'FranckerCYR',
+    sans-serif;
+  font-weight: 600;
+}
+
+%Gil300 {
+  font-family: 'Gilroy',
+    sans-serif;
+  font-weight: 300;
+}
+
+%Gil400 {
+  font-family: 'Gilroy',
+    sans-serif;
+  font-weight: 400;
+}
+
+%Gil500 {
+  font-family: 'Gilroy',
+    sans-serif;
+  font-weight: 500;
+}
+
+%Prosto400 {
+  font-family: 'Prosto One',
+    sans-serif;
+  font-weight: 400;
+}
+
+%Disp700 {
+  font-family: 'display',
+    sans-serif;
+  font-weight: 700;
+}
+
+$main:#E7EDF1;
+$accent: #087DEA;
+
+
+
+// @function max($numbers...) {
+//   @return m#{a}x(#{$numbers});
+// }
+
+// @function min($numbers...) {
+//   @return m#{i}n(#{$numbers});
+// }
+
+
+
+// media 
+$xxl:1880px;
+$xl:1650px;
+$bs:1440px;
+$lg:1200px;
+$md:992px;
+$sm:768px;
+$xs:576px;
+
+// @media (max-width: $xxl) {}
+// @media (max-width: $xl) {}
+// @media (max-width: $bs) {}
+// @media (max-width: $lg) {}
+// @media (max-width: $md) {}
+// @media (max-width: $sm) {}
+// @media (max-width: $xs) {}

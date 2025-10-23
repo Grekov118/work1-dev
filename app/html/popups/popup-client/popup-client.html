@@ -1,0 +1,33 @@
+<div class="popup-client modal" id="client">
+  <button class="popup-client__close" type="button" data-close>
+    <svg class="popup-client__icon">
+      <use xlink:href="images/sprite.svg#icons--close"></use>
+    </svg>
+  </button>
+  <div class="container container--large">
+    <div class="popup-client__box">
+      <div class="popup-client__inner">
+        <div class="popup-client__info">
+          <h2 class="popup-client__title title">Форма обратной связи</h2>
+          <span class="popup-client__subtitle">Заполните анкету и мы перезвоним Вам в ближайшее время</span>
+        </div>
+        <form class="popup-client__form" action="mail.php" method="POST">
+          <div class="popup-client__inputs">
+
+            <label class="popup-client__label">
+              <input class="popup-client__input" type="text" name="name" placeholder="Ваше имя">
+            </label>
+            <label class="popup-client__label">
+              <input class="popup-client__input" id="phone" type="tel" name="tel" placeholder="Ваш телефон">
+            </label>
+            <label class="popup-client__label">
+              <input class="popup-client__input" type="email" name="email" placeholder="Ваша почта">
+            </label>
+          </div>
+          <textarea class="popup-client__textarea" name="text" placeholder="Ваше сообщение"></textarea>
+          <button class="popup-client__btn" type="submit">Отправить заявку</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

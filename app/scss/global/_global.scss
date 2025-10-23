@@ -1,0 +1,192 @@
+html,
+body {
+  
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  line-height: 1.2;
+  @extend %Franck400;
+  color: $main;
+  background-color: #07071c;
+  overflow-x: hidden;
+
+
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+.container {
+  max-width: 1690px;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  &--large {
+    max-width: 3000px;
+    padding: 0;
+
+    @media (max-width: $sm) {
+      padding: 0 15px;
+    }
+  }
+}
+
+.title {
+  font-size: 35px;
+  @extend %Prosto400;
+  line-height: 2;
+  color: $main;
+}
+
+main {
+  flex-grow: 1;
+}
+
+a {
+  display: block;
+  color: inherit;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @extend %Franck600;
+  color: $main;
+  line-height: 2;
+  width: 320px;
+  height: 70px;
+  margin: 0 auto;
+
+  filter: blur(0px);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+
+  border: 3px solid transparent;
+  background: radial-gradient(170.66% 2296.43% at -8.83% -25%, #3093EF 0%, #144DA3 100%);
+
+  -moz-transform-origin: 60% 50%;
+  -moz-transform: perspective(400px) rotateX(-18deg);
+  -webkit-transform-origin: 60% 50%;
+  -webkit-transform: perspective(400px) rotateX(-18deg);
+  transform-origin: 60% 50%;
+  transform: perspective(400px) rotateX(-18deg);
+
+  cursor: pointer;
+  transition: transform 0.5s ease-in, background 0.5s ease-in, border-color 0.5s linear;
+
+  @media (max-width: $xs) {
+    width: 285px;
+  }
+
+  &:hover {
+    -moz-transform-origin: 50% 0%;
+    -moz-transform: perspective(800px) rotateX(-30deg);
+    -webkit-transform-origin: 50% 0%;
+    -webkit-transform: perspective(800px) rotateX(-30deg);
+    transform-origin: 50% 0%;
+    transform: perspective(800px) rotateX(-30deg);
+
+    background: rgba(59, 70, 74, 0.01);
+    border: 3px solid $accent;
+
+    backdrop-filter: blur(15px);
+  }
+
+  &:active {
+    -moz-transform-origin: 50% 0%;
+    -moz-transform: perspective(800px) rotateX(-30deg);
+    -webkit-transform-origin: 50% 0%;
+    -webkit-transform: perspective(800px) rotateX(-30deg);
+    transform-origin: 50% 0%;
+    transform: perspective(800px) rotateX(-30deg);
+
+    background: rgba(59, 70, 74, 0.01);
+    border: 3px solid $accent;
+
+    backdrop-filter: blur(15px);
+  }
+
+  &:focus {
+    -moz-transform-origin: 50% 0%;
+    -moz-transform: perspective(800px) rotateX(-30deg);
+    -webkit-transform-origin: 50% 0%;
+    -webkit-transform: perspective(800px) rotateX(-30deg);
+    transform-origin: 50% 0%;
+    transform: perspective(800px) rotateX(-30deg);
+
+    background: rgba(59, 70, 74, 0.01);
+    border: 3px solid $accent;
+
+    backdrop-filter: blur(15px);
+    outline: transparent;
+  }
+}
+
+.frame {
+  position: relative;
+
+  @media (max-width: $xs) {
+    margin: 0 auto;
+  }
+
+
+  &::after {
+    content: "";
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 458px;
+    height: 272px;
+    background-image: url('../images/frames/screensm.png');
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media (max-width: $bs) {
+      left: 14px;
+    }
+
+    @media (max-width: $xs) {
+      width: 282px;
+      height: 195px;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -13px;
+    left: -20px;
+    width: 516px;
+    height: 300px;
+    background-image: url('../images/frames/framebg.png');
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media (max-width: $bs) {
+      left: -5px;
+    }
+
+    @media (max-width: $xs) {
+      top: -13px;
+      left: -11px;
+      width: 308px;
+      height: 221px;
+    }
+  }
+
+  &:hover {
+    &::before {
+      z-index: 2;
+    }
+  }
+}
